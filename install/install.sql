@@ -76,3 +76,11 @@ CREATE TABLE IF NOT EXISTS listeners_indiana (
     remote_address VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS socialism (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    national_id VARCHAR(100) NOT NULL,
+    ip VARCHAR(45),
+    score INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

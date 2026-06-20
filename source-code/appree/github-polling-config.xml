@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<github-polling>
+    <sites>
+        <site id="mearvk" url="https://github.com/mearvk" enabled="true"/>
+        <site id="gdgh" url="https://github.com/mearvk/Green.Durham.Grass.and.Herb" enabled="true"/>
+        <site id="webserver" url="https://github.com/mearvk/Java.Web.Server.Telnet.Front.Java.21" enabled="true"/>
+        <site id="imaging" url="https://github.com/mearvk/Java.Imaging.Java.21" enabled="true"/>
+    </sites>
+    <polling>
+        <interval-seconds>300</interval-seconds>
+        <timeout-ms>5000</timeout-ms>
+    </polling>
+    <responses>
+        <response keyword="status">Polling results for requested site returned.</response>
+        <response keyword="check">Running HTTP check against configured GitHub endpoints.</response>
+        <response keyword="default">GitHub polling service is active. Ask 'status' or 'check'.</response>
+    </responses>
+</github-polling>

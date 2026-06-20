@@ -15,6 +15,7 @@ public class Main {
 
     private static final String[] CONFIG_PATHS = {
         "source-code/appree/appree-config.xml",
+        "source-code/appree/github-polling-config.xml",
         "source-code/labor/ai-interpreter-config.xml",
         "source-code/ethical/db-config.xml",
         "source-code/labor/db-config.xml",
@@ -62,8 +63,10 @@ public class Main {
                 String path = entry.getKey();
                 Document doc = entry.getValue();
 
-                if (path.contains("appree")) {
+                if (path.contains("appree") && !path.contains("github")) {
                     evaluateListeners(doc);
+                } else if (path.contains("github-polling")) {
+                    evaluateGithubPolling(doc);
                 } else if (path.contains("ai-interpreter")) {
                     evaluateInterpreters(doc);
                 } else if (path.contains("db-config")) {
@@ -92,6 +95,15 @@ public class Main {
             NodeList urlNodes = doc.getElementsByTagName("url");
             String url = urlNodes.getLength() > 0 ? urlNodes.item(0).getTextContent() : "unknown";
             System.out.println("[DECISION] DB for " + module + ": " + url);
+        }
+
+        private void evaluateGithubPolling(Document doc) {
+            NodeList sites = doc.getElementsByTagName("site");
+            int enabled = 0;
+            for (int i = 0; i < sites.getLength(); i++) {
+                if ("true".equals(((Element) sites.item(i)).getAttribute("enabled"))) enabled++;
+            }
+            System.out.println("[DECISION] GitHub polling: " + enabled + "/" + sites.getLength() + " sites enabled");
         }
     }
 }
