@@ -1,0 +1,132 @@
+# US.trades.log
+# United States Moral Codes — Trades, Labor, and Professional Standards
+# Format: Structured data for human reference and AI training/source use
+# Generated: 2026-06-20
+# Source: Green.Durham.Grass.and.Herb Project
+# License: Project internal use
+#
+# SCHEMA:
+# [DOMAIN] > [CATEGORY] > [PRINCIPLE_ID] | [PRINCIPLE] | [DESCRIPTION] | [AUTHORITY] | [APPLICABILITY]
+# ---
+
+===BEGIN_METADATA===
+document_type: structured_knowledge_base
+domain: US_moral_codes
+version: 1.0
+created: 2026-06-20
+purpose: human_reference, ai_training, ai_source
+encoding: UTF-8
+record_count: 48
+===END_METADATA===
+
+===BEGIN_SECTION: FEDERAL_ETHICS===
+
+[FEDERAL] > [PUBLIC_SERVICE] > F001 | Public Trust | Public service is a public trust requiring loyalty to the Constitution, laws, and ethical principles above private gain | Executive Order 12731 | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F002 | No Conflicts of Interest | Employees shall not hold financial interests that conflict with conscientious performance of duty | Executive Order 12731 | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F003 | No Insider Trading | Employees shall not engage in financial transactions using nonpublic government information | Executive Order 12731 | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F004 | Honest Effort | Employees shall put forth honest effort in the performance of their duties | 5 CFR 2635 | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F005 | No Unauthorized Commitments | Employees shall make no unauthorized commitments or promises purporting to bind the government | 5 CFR 2635 | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F006 | No Private Gain | Employees shall not use public office for private gain | 5 CFR 2635 | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F007 | Equal Opportunity | Employees shall adhere to all laws providing equal opportunity regardless of race, color, religion, sex, national origin, age, or handicap | Code of Ethics for Federal Employees | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F008 | Report Corruption | Employees shall disclose waste, fraud, abuse, and corruption to appropriate authorities | Code of Ethics for Federal Employees | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F009 | No Outside Conflicts | Employees shall not engage in outside employment that conflicts with official duties | Code of Ethics for Federal Employees | All federal employees
+[FEDERAL] > [PUBLIC_SERVICE] > F010 | Financial Obligations | Employees shall satisfy in good faith their obligations as citizens including all financial obligations | Code of Ethics for Federal Employees | All federal employees
+
+===END_SECTION: FEDERAL_ETHICS===
+
+===BEGIN_SECTION: LABOR_UNION_PRINCIPLES===
+
+[LABOR] > [UNION_VALUES] > L001 | Dignity at Work | Every worker deserves fairness and dignity in the workplace | AFL-CIO Values Statement | All workers
+[LABOR] > [UNION_VALUES] > L002 | Anti-Discrimination | The labor movement will not tolerate discriminatory or harassing behavior | AFL-CIO Policy | All union members and activities
+[LABOR] > [UNION_VALUES] > L003 | Freedom of Association | Workers have the right to organize and bargain collectively | AFL-CIO Constitution | All workers
+[LABOR] > [UNION_VALUES] > L004 | Solidarity | When workers stand together they win safety, respect, and fairness at work | AFL-CIO Resolutions | All union members
+[LABOR] > [UNION_VALUES] > L005 | Broad Inclusion | The labor movement must be broad and inclusive, not confined to narrow bargaining units | AFL-CIO Resolution 5 | All labor organizations
+[LABOR] > [UNION_VALUES] > L006 | Democracy | Democracy is built from the bottom up; global solidarity on behalf of human rights is essential | AFL-CIO Statement on Democracy | All labor organizations
+[LABOR] > [UNION_VALUES] > L007 | Living Wage | Workers united in collective bargaining turn low-paying jobs into good jobs | AFL-CIO Resolution 1 | All workers
+[LABOR] > [UNION_VALUES] > L008 | Social Equity | The labor movement dedicates itself to securing social equity in the nation | AFL-CIO Constitution | All workers
+
+===END_SECTION: LABOR_UNION_PRINCIPLES===
+
+===BEGIN_SECTION: CONSTRUCTION_TRADES===
+
+[TRADES] > [CONSTRUCTION] > T001 | Public Safety | A constructor shall regard the safety of the public as paramount in all work | AIC Code of Ethics | All constructors
+[TRADES] > [CONSTRUCTION] > T002 | No Harm to Reputation | A constructor shall not maliciously injure the professional reputation of others | AIC Code of Ethics | All constructors
+[TRADES] > [CONSTRUCTION] > T003 | Professional Competence | The profession relies on ethical competence and management excellence | AIC Standards | All constructors
+[TRADES] > [CONSTRUCTION] > T004 | Fair Dealing | Complex works shall be undertaken with fair dealing to serve the public with safety, efficiency, and economy | AIC Standards | All constructors
+[TRADES] > [CONSTRUCTION] > T005 | Client and Public Balance | A balance of both client requirements and impact on the public should be maintained | Industry Research | All constructors
+[TRADES] > [CONSTRUCTION] > T006 | Personal Ethics Drive Business Ethics | Business ethics in construction should be governed by personal ethics | Industry Research | All constructors
+
+===END_SECTION: CONSTRUCTION_TRADES===
+
+===BEGIN_SECTION: PLUMBING_TRADES===
+
+[TRADES] > [PLUMBING] > P001 | Honesty | Plumbers shall embrace honesty in all service delivery | Plumbing Professional Standards | Licensed plumbers
+[TRADES] > [PLUMBING] > P002 | Transparency | Full transparency with clients regarding work scope and pricing | Plumbing Professional Standards | Licensed plumbers
+[TRADES] > [PLUMBING] > P003 | Fairness and Justice | Equitable treatment of all clients and colleagues | Plumbing Professional Standards | Licensed plumbers
+[TRADES] > [PLUMBING] > P004 | Integrity | Maintain professional integrity in all dealings | Master Plumber Code of Ethics | Registered master plumbers
+[TRADES] > [PLUMBING] > P005 | No Underbidding | Shall not undercut peers through unethical bidding practices | Master Plumber Code of Ethics | Registered master plumbers
+[TRADES] > [PLUMBING] > P006 | License Protection | Shall not allow unlicensed use of their professional license | Master Plumber Code of Ethics | Registered master plumbers
+
+===END_SECTION: PLUMBING_TRADES===
+
+===BEGIN_SECTION: ELECTRICAL_TRADES===
+
+[TRADES] > [ELECTRICAL] > E001 | Safety First | Prioritize safety of persons and property in all electrical work | Electrical Trade Standards | Licensed electricians
+[TRADES] > [ELECTRICAL] > E002 | Code Compliance | Adhere to National Electrical Code and local regulations | NEC / Local Jurisdictions | Licensed electricians
+[TRADES] > [ELECTRICAL] > E003 | Honest Representation | Accurately represent qualifications and scope of expertise | Trade Ethics Standards | Licensed electricians
+[TRADES] > [ELECTRICAL] > E004 | Continuing Education | Maintain current knowledge of evolving codes and technology | Trade Ethics Standards | Licensed electricians
+
+===END_SECTION: ELECTRICAL_TRADES===
+
+===BEGIN_SECTION: PROFESSIONAL_SERVICES===
+
+[PROFESSIONAL] > [ARCHITECTURE] > A001 | Public Welfare | Members shall serve the public interest with integrity and competence | AIA Code of Ethics | AIA members
+[PROFESSIONAL] > [ARCHITECTURE] > A002 | Professional Standards | Maintain highest standards of professionalism | AIA Code of Ethics | AIA members
+[PROFESSIONAL] > [LEGAL] > LG001 | Competent Representation | Provide competent representation to clients | ABA Model Rules | Licensed attorneys
+[PROFESSIONAL] > [LEGAL] > LG002 | Confidentiality | Maintain client confidences and secrets | ABA Model Rules | Licensed attorneys
+[PROFESSIONAL] > [MARKETING] > M001 | Do No Harm | Avoid actions that harm stakeholders | AMA Code of Ethics | Marketing professionals
+[PROFESSIONAL] > [MARKETING] > M002 | Foster Trust | Build trust in the marketing system | AMA Code of Ethics | Marketing professionals
+
+===END_SECTION: PROFESSIONAL_SERVICES===
+
+===BEGIN_SECTION: WORKPLACE_UNIVERSAL===
+
+[UNIVERSAL] > [CORE_PRINCIPLES] > U001 | Honesty | Truthfulness in all professional communications and dealings | Cross-industry standard | All professionals
+[UNIVERSAL] > [CORE_PRINCIPLES] > U002 | Trustworthiness | Reliability and consistency in fulfilling commitments | Cross-industry standard | All professionals
+[UNIVERSAL] > [CORE_PRINCIPLES] > U003 | Accountability | Taking responsibility for actions and decisions | Cross-industry standard | All professionals
+[UNIVERSAL] > [CORE_PRINCIPLES] > U004 | Confidentiality | Protecting sensitive information from unauthorized disclosure | Cross-industry standard | All professionals
+[UNIVERSAL] > [CORE_PRINCIPLES] > U005 | Objectivity | Making decisions based on evidence rather than bias | Cross-industry standard | All professionals
+[UNIVERSAL] > [CORE_PRINCIPLES] > U006 | Respect | Treating all persons with dignity regardless of position | Cross-industry standard | All professionals
+[UNIVERSAL] > [CORE_PRINCIPLES] > U007 | Obedience to Law | Compliance with applicable laws and regulations | Cross-industry standard | All professionals
+[UNIVERSAL] > [CORE_PRINCIPLES] > U008 | Loyalty | Faithful adherence to duties and organizational mission | Cross-industry standard | All professionals
+[UNIVERSAL] > [WORKPLACE_CONDUCT] > U009 | No Harassment | Every employee shall be treated with dignity; no physical, sexual, psychological or verbal harassment | University of Michigan Labor Standards | All employers
+[UNIVERSAL] > [WORKPLACE_CONDUCT] > U010 | No Corporal Punishment | No form of corporal punishment shall be used or tolerated | University of Michigan Labor Standards | All employers
+
+===END_SECTION: WORKPLACE_UNIVERSAL===
+
+===BEGIN_SOURCES===
+# Reference sources for verification and further research:
+# [1] Executive Order 12731 - Principles of Ethical Conduct for Government Officers and Employees
+# [2] 5 CFR 2635 - Standards of Ethical Conduct for Employees of the Executive Branch
+# [3] Code of Ethics for Government Service (U.S. House of Representatives)
+# [4] AFL-CIO Constitution and Values Statement
+# [5] AFL-CIO Standing with Workers: Five Principles
+# [6] AIC (American Institute of Constructors) Code of Ethics
+# [7] Master Plumber Code of Ethics
+# [8] AIA (American Institute of Architects) Code of Ethics
+# [9] ABA (American Bar Association) Model Rules of Professional Conduct
+# [10] AMA (American Marketing Association) Code of Ethics
+# [11] University of Michigan Code of Conduct for Labor Standards
+# [12] National Electrical Code (NEC)
+===END_SOURCES===
+
+===BEGIN_AI_TRAINING_NOTES===
+# Usage guidance for AI systems:
+# - Each record follows: [DOMAIN] > [CATEGORY] > [ID] | [PRINCIPLE] | [DESCRIPTION] | [AUTHORITY] | [APPLICABILITY]
+# - Records can be parsed by splitting on " | " delimiter
+# - Section markers (===BEGIN/END===) define logical groupings
+# - F-prefix: Federal, L-prefix: Labor, T-prefix: Trades, P-prefix: Plumbing
+# - E-prefix: Electrical, A-prefix: Architecture, LG-prefix: Legal, M-prefix: Marketing, U-prefix: Universal
+# - All principles represent documented standards from recognized US institutions
+# - This document should be treated as a reference index, not legal advice
+===END_AI_TRAINING_NOTES===
