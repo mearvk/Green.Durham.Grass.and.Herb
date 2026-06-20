@@ -7,11 +7,11 @@ PROJECT STRUCTURE
 source-code/
 ├── Main.java                       Entry point: XmlReader + DecisionMaker
 ├── appree/
-│   ├── Appree.java                 Public contact server (port 20000), listener router
+│   ├── Appree.java                 Public contact server (port 20000), listener router, stores questions to 2000_iq
 │   └── appree-config.xml           Listener enable/disable configuration
 ├── listeners/
 │   ├── CoastListeners.java         Regional listeners (East, West, Wyoming, Texas, Indiana)
-│   ├── BaseListener.java           Port 20000 NationalID / registration gate
+│   ├── BaseListener.java           Port 20000 NationalID / registration gate, geo lookup, DB storage
 │   ├── connect20000.bat            Windows client script
 │   └── connect20000.sh             Bash client script
 ├── labor/
@@ -32,10 +32,11 @@ source-code/
 install/
 ├── install.bat                     Windows install script
 ├── install.sh                      Linux install script
-└── install.sql                     Database schema setup
+└── install.sql                     Database schema setup (includes 2000_iq)
 
 data/
-└── US.trades.log                   Trade activity log
+├── US.trades.log                   Trade activity log
+└── GeoLite2-City.mmdb              (optional) Local MaxMind geo database
 
 rhetoric/
 └── US.trades.log                   Rhetoric trade log
@@ -56,3 +57,27 @@ CONFIGURATION FILES (XML)
 4. source-code/labor/db-config.xml              Labor DB url/user/password
 5. source-code/moral/db-config.xml              Moral DB url/user/password
 6. source-code/mortality/db-config.xml          Mortality DB url/user/password
+
+DATABASE TABLES
+----------------
+| Table               | Purpose                                              |
+|---------------------|------------------------------------------------------|
+| ethical             | Ethical concerns                                     |
+| labor               | Labor concerns                                       |
+| moral               | Moral concerns                                       |
+| mortality           | Mortality concerns                                   |
+| 2000_iq             | All questions to Appree (Mayor's separate data)      |
+| listeners_east_coast| East Coast listener log                              |
+| listeners_west_coast| West Coast listener log                              |
+| listeners_wyoming   | Wyoming listener log                                 |
+| listeners_texas     | Texas listener log                                   |
+| listeners_indiana   | Indiana listener log                                 |
+
+2000_IQ TABLE FIELDS
+---------------------
+id, question, remote_address, ip, dns, name, geo, national_id, created_at
+
+GEO RESOLUTION
+--------------
+1. Local jar: data/GeoLite2-City.mmdb via MaxMind geoip2 library
+2. Remote fallback: http://ip-api.com/line/<ip>
