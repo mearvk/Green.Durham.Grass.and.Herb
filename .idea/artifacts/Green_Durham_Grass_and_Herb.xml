@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Green.Durham.Grass.and.Herb">
+    <output-path>$PROJECT_DIR$/out/artifacts/Green_Durham_Grass_and_Herb</output-path>
+    <root id="archive" name="Green.Durham.Grass.and.Herb.jar">
+      <element id="module-output" name="Green.Durham.Grass.and.Herb" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/api-0.31.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/pytorch-native-cpu-2.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/model-zoo-0.31.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/pytorch-engine-0.31.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/basicdataset-0.31.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/pytorch-model-zoo-0.31.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/gson-2.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/slf4j-simple-2.0.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/slf4j-api-2.0.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/jna-5.15.0.jar" path-in-jar="/" />
+      <element id="dir-copy" path="$PROJECT_DIR$/configuration" />
+      <element id="dir-copy" path="$PROJECT_DIR$/install" />
+      <element id="dir-copy" path="$PROJECT_DIR$/installation" />
+      <element id="dir-copy" path="$PROJECT_DIR$/jars" />
+      <element id="dir-copy" path="$PROJECT_DIR$/labor-concerns" />
+      <element id="dir-copy" path="$PROJECT_DIR$/rhetoric" />
+    </root>
+  </artifact>
+</component>

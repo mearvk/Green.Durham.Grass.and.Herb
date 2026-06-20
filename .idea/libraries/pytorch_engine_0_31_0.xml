@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pytorch-engine-0.31.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jars/pytorch-engine-0.31.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

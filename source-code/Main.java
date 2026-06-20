@@ -1,6 +1,7 @@
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.*;
 import java.io.File;
+import java.net.URI;
 import java.util.*;
 
 /**
@@ -23,7 +24,22 @@ public class Main {
         "configuration/mortality-db-config.xml"
     };
 
+    private static String baseDir = "";
+
     public static void main(String... args) throws Exception {
+        // Accept optional base directory argument, or detect from jar location
+        if (args.length > 0) {
+            baseDir = args[0].endsWith(File.separator) ? args[0] : args[0] + File.separator;
+        } else {
+            String jarPath = Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
+            File jarFile = new File(jarPath);
+            File jarDir = jarFile.isDirectory() ? jarFile : jarFile.getParentFile();
+            // Walk up to find "configuration" folder
+            File dir = jarDir;
+            while (dir != null && !new File(dir, "configuration").isDirectory()) dir = dir.getParentFile();
+            if (dir != null) baseDir = dir.getPath() + File.separator;
+        }
+
         XmlReader reader = new XmlReader();
         Map<String, Document> configs = reader.loadAll(CONFIG_PATHS);
 
@@ -37,7 +53,7 @@ public class Main {
             for (String path : paths) {
                 try {
                     Document doc = DocumentBuilderFactory.newInstance()
-                            .newDocumentBuilder().parse(new File(path));
+                            .newDocumentBuilder().parse(new File(baseDir + path));
                     doc.getDocumentElement().normalize();
                     docs.put(path, doc);
                     System.out.println("[XML] Loaded: " + path);

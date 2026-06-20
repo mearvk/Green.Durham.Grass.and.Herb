@@ -13,13 +13,16 @@
         <site id="imaging" url="https://github.com/mearvk/Rules.of.Simulations" enabled="true"/>
 
     </sites>
+
     <polling>
         <interval-seconds>300</interval-seconds>
         <timeout-ms>5000</timeout-ms>
     </polling>
+
     <responses>
         <response keyword="status">Polling results for requested site returned.</response>
         <response keyword="check">Running HTTP check against configured GitHub endpoints.</response>
         <response keyword="default">GitHub polling service is active. Ask 'status' or 'check'.</response>
     </responses>
+
 </github-polling>

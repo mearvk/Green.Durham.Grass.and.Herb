@@ -9,5 +9,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="api-0.31.0" level="project" />
+    <orderEntry type="library" name="basicdataset-0.31.0" level="project" />
+    <orderEntry type="library" name="gson-2.11.0" level="project" />
+    <orderEntry type="library" name="jna-5.15.0" level="project" />
+    <orderEntry type="library" name="model-zoo-0.31.0" level="project" />
+    <orderEntry type="library" name="pytorch-engine-0.31.0" level="project" />
+    <orderEntry type="library" name="pytorch-model-zoo-0.31.0" level="project" />
+    <orderEntry type="library" name="pytorch-native-cpu-2.5.1" level="project" />
+    <orderEntry type="library" name="pytorch-native-cpu-2.5.2" level="project" />
+    <orderEntry type="library" name="slf4j-api-2.0.16" level="project" />
+    <orderEntry type="library" name="slf4j-simple-2.0.16" level="project" />
   </component>
 </module>

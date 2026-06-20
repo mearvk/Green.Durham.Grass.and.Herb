@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pytorch-native-cpu-2.5.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jars/pytorch-native-cpu-2.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
