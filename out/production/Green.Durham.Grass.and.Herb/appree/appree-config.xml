@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appree>
+    <listeners>
+        <listener enabled="true" port="40002" label="East Coast"/>
+        <listener enabled="true" port="40003" label="West Coast"/>
+        <listener enabled="false" port="40005" label="Wyoming"/>
+        <listener enabled="true" port="40007" label="Texas"/>
+        <listener enabled="false" port="40009" label="Indiana"/>
+    </listeners>
+</appree>
