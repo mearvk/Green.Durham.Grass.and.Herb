@@ -24,3 +24,43 @@ CREATE TABLE IF NOT EXISTS mortality (
     concern VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS listeners_east_coast (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    port INT DEFAULT 40002,
+    message VARCHAR(255),
+    remote_address VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS listeners_west_coast (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    port INT DEFAULT 40003,
+    message VARCHAR(255),
+    remote_address VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS listeners_wyoming (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    port INT DEFAULT 40005,
+    message VARCHAR(255),
+    remote_address VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS listeners_texas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    port INT DEFAULT 40007,
+    message VARCHAR(255),
+    remote_address VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS listeners_indiana (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    port INT DEFAULT 40009,
+    message VARCHAR(255),
+    remote_address VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
