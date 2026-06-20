@@ -126,7 +126,15 @@ public class Main {
                     evaluateDbConfig(path, doc);
                 }
             }
-            System.out.println("[DECISION] Evaluation complete.");
+            int total = 7; // total expected configs
+            int loaded = configs.size();
+            if (loaded == total) {
+                System.out.println("\u001B[32m[DECISION] Evaluation complete.\u001B[0m");
+            } else if (loaded > 0) {
+                System.out.println("\u001B[33m[DECISION] Evaluation complete (" + (total - loaded) + " config(s) missing).\u001B[0m");
+            } else {
+                System.out.println("\u001B[31m[DECISION] Evaluation failed — program did not load.\u001B[0m");
+            }
         }
 
         private void evaluateListeners(Document doc) {
