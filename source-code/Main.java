@@ -40,8 +40,6 @@ public class Main {
             if (dir != null) baseDir = dir.getPath() + File.separator;
         }
 
-        System.out.println("=== Green.Durham.Grass.and.Herb — Startup ===");
-
         XmlReader reader = new XmlReader();
         Map<String, Document> configs = reader.loadAll(CONFIG_PATHS);
 
@@ -52,7 +50,8 @@ public class Main {
             NodeList vNodes = appreeDoc.getElementsByTagName("version");
             if (vNodes.getLength() > 0) version = vNodes.item(0).getTextContent();
         }
-        System.out.println("Version: " + version + "\n");
+
+        System.out.println("=== Green.Durham.Grass.and.Herb . Java™ Finance and Moral Systems . Version "+version+" . Startup ===");
 
         System.out.println("\n--- Module Status ---");
 
