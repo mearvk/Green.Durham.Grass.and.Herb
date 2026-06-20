@@ -25,6 +25,18 @@ CREATE TABLE IF NOT EXISTS mortality (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS `2000_iq` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question TEXT NOT NULL,
+    remote_address VARCHAR(255),
+    ip VARCHAR(45),
+    dns VARCHAR(255),
+    name VARCHAR(255),
+    geo VARCHAR(255),
+    national_id VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE IF NOT EXISTS listeners_east_coast (
     id INT AUTO_INCREMENT PRIMARY KEY,
     port INT DEFAULT 40002,
