@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-config>
+    <url>jdbc:mysql://localhost:3306/green_durham_grass_and_herb</url>
+    <user>root</user>
+    <password></password>
+    <table>ethical</table>
+</db-config>
