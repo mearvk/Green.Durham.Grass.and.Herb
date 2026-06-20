@@ -40,8 +40,45 @@ public class Main {
             if (dir != null) baseDir = dir.getPath() + File.separator;
         }
 
+        System.out.println("=== Green.Durham.Grass.and.Herb — Startup ===\n");
+
         XmlReader reader = new XmlReader();
         Map<String, Document> configs = reader.loadAll(CONFIG_PATHS);
+
+        System.out.println("\n--- Module Status ---");
+
+        // DB modules
+        String[] dbModules = {"ethical", "labor", "moral", "mortality"};
+        boolean allDbLoaded = true;
+        for (String mod : dbModules) {
+            String key = "configuration/" + mod + "-db-config.xml";
+            boolean found = configs.containsKey(key);
+            System.out.println("[DB] " + mod + ": " + (found ? "LOADED" : "NOT FOUND"));
+            if (!found) allDbLoaded = false;
+        }
+
+        // AI modules
+        boolean aiLoaded = configs.containsKey("configuration/ai-interpreter-config.xml");
+        System.out.println("[AI] ai-interpreter: " + (aiLoaded ? "LOADED" : "NOT FOUND"));
+
+        // Check jars directory
+        File jarsDir = new File(baseDir + "jars");
+        boolean jarsFound = jarsDir.isDirectory() && jarsDir.list().length > 0;
+        System.out.println("[AI] PyTorch jars: " + (jarsFound ? "FOUND (" + jarsDir.list().length + " jars)" : "NOT FOUND"));
+
+        // Appree config (starting XML)
+        boolean appreeLoaded = configs.containsKey("configuration/appree-config.xml");
+        boolean pollingLoaded = configs.containsKey("configuration/github-polling-config.xml");
+        System.out.println("[CORE] appree-config: " + (appreeLoaded ? "LOADED" : "NOT FOUND"));
+        System.out.println("[CORE] github-polling-config: " + (pollingLoaded ? "LOADED" : "NOT FOUND"));
+
+        // Final verdict
+        boolean systemReady = allDbLoaded && aiLoaded && appreeLoaded;
+        System.out.println("\n--- Result ---");
+        System.out.println("[SYSTEM] All DB modules loaded: " + (allDbLoaded ? "YES" : "NO"));
+        System.out.println("[SYSTEM] AI modules loaded: " + (aiLoaded ? "YES" : "NO"));
+        System.out.println("[SYSTEM] Started from XML: " + (appreeLoaded ? "YES" : "NO"));
+        System.out.println("[SYSTEM] Status: " + (systemReady ? "RUNNING" : "DEGRADED") + "\n");
 
         DecisionMaker dm = new DecisionMaker(configs);
         dm.evaluate();

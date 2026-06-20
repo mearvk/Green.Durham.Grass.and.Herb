@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: Main
+Class-Path: api-0.31.0.jar pytorch-native-cpu-2.5.1.jar model-zoo-0.31.0
+ .jar pytorch-engine-0.31.0.jar basicdataset-0.31.0.jar pytorch-native-c
+ pu-2.5.1.jar pytorch-model-zoo-0.31.0.jar gson-2.11.0.jar slf4j-simple-
+ 2.0.16.jar slf4j-api-2.0.16.jar jna-5.15.0.jar
+
