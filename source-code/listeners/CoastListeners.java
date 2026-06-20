@@ -8,6 +8,9 @@ public class CoastListeners {
     public static void main(String... args) throws Exception {
         new Thread(() -> listen(40002, "East Coast")).start();
         new Thread(() -> listen(40003, "West Coast")).start();
+        new Thread(() -> listen(40005, "Wyoming")).start();
+        new Thread(() -> listen(40007, "Texas")).start();
+        new Thread(() -> listen(40009, "Indiana")).start();
     }
 
     private static void listen(int port, String label) {
