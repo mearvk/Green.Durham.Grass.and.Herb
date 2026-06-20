@@ -1,0 +1,58 @@
+Green.Durham.Grass.and.Herb
+============================
+
+PROJECT STRUCTURE
+-----------------
+
+source-code/
+├── Main.java                       Entry point: XmlReader + DecisionMaker
+├── appree/
+│   ├── Appree.java                 Public contact server (port 20000), listener router
+│   └── appree-config.xml           Listener enable/disable configuration
+├── listeners/
+│   ├── CoastListeners.java         Regional listeners (East, West, Wyoming, Texas, Indiana)
+│   ├── BaseListener.java           Port 20000 NationalID / registration gate
+│   ├── connect20000.bat            Windows client script
+│   └── connect20000.sh             Bash client script
+├── labor/
+│   ├── LaborConcerns.java          DB connection for labor module
+│   ├── LaborAiInterpreter.java     AI responder for labor inquiries
+│   ├── ai-interpreter-config.xml   Interpreter port/response config
+│   └── db-config.xml               Labor DB credentials
+├── ethical/
+│   ├── EthicalConcerns.java        DB connection for ethical module
+│   └── db-config.xml               Ethical DB credentials
+├── moral/
+│   ├── MoralConcerns.java          DB connection for moral module
+│   └── db-config.xml               Moral DB credentials
+└── mortality/
+    ├── MortalConcerns.java         DB connection for mortality module
+    └── db-config.xml               Mortality DB credentials
+
+install/
+├── install.bat                     Windows install script
+├── install.sh                      Linux install script
+└── install.sql                     Database schema setup
+
+data/
+└── US.trades.log                   Trade activity log
+
+rhetoric/
+└── US.trades.log                   Rhetoric trade log
+
+labor-concerns/
+├── labor/                          Labor reference materials
+├── intelligence/                   Intelligence reference materials
+└── democracy/                      Democracy reference materials
+
+schema.sql                          Root database schema
+install.sh                          Root install shortcut
+
+CONFIGURATION FILES (XML)
+--------------------------
+1. source-code/appree/appree-config.xml         Listener port/label/enabled
+2. source-code/labor/ai-interpreter-config.xml  AI interpreter coast/port/responses
+3. source-code/ethical/db-config.xml            Ethical DB url/user/password
+4. source-code/labor/db-config.xml              Labor DB url/user/password
+5. source-code/moral/db-config.xml              Moral DB url/user/password
+6. source-code/mortality/db-config.xml          Mortality DB url/user/password
