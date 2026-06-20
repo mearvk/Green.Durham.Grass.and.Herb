@@ -51,7 +51,7 @@ public class Main {
             if (vNodes.getLength() > 0) version = vNodes.item(0).getTextContent();
         }
 
-        System.out.println("=== Green.Durham.Grass.and.Herb . Java™ Finance and Moral Systems . Version "+version+" . Startup ===");
+        System.out.println("=== Green.Durham.Grass.and.Herb . Java Finance and Moral Systems . Version "+version+" . Startup ===");
 
         System.out.println("\n--- Module Status ---");
 
