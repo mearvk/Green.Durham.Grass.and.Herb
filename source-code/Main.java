@@ -14,13 +14,13 @@ import java.util.*;
 public class Main {
 
     private static final String[] CONFIG_PATHS = {
-        "source-code/appree/appree-config.xml",
-        "source-code/appree/github-polling-config.xml",
-        "source-code/labor/ai-interpreter-config.xml",
-        "source-code/ethical/db-config.xml",
-        "source-code/labor/db-config.xml",
-        "source-code/moral/db-config.xml",
-        "source-code/mortality/db-config.xml"
+        "configuration/appree-config.xml",
+        "configuration/github-polling-config.xml",
+        "configuration/ai-interpreter-config.xml",
+        "configuration/ethical-db-config.xml",
+        "configuration/labor-db-config.xml",
+        "configuration/moral-db-config.xml",
+        "configuration/mortality-db-config.xml"
     };
 
     public static void main(String... args) throws Exception {
@@ -91,7 +91,7 @@ public class Main {
         }
 
         private void evaluateDbConfig(String path, Document doc) {
-            String module = path.split("/")[1]; // ethical, labor, moral, mortality
+            String module = path.replaceAll(".*/", "").replace("-db-config.xml", "");
             NodeList urlNodes = doc.getElementsByTagName("url");
             String url = urlNodes.getLength() > 0 ? urlNodes.item(0).getTextContent() : "unknown";
             System.out.println("[DECISION] DB for " + module + ": " + url);

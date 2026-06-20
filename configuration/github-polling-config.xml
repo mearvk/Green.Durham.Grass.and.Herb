@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <github-polling>
     <sites>
+
         <site id="mearvk" url="https://github.com/mearvk" enabled="true"/>
         <site id="gdgh" url="https://github.com/mearvk/Green.Durham.Grass.and.Herb" enabled="true"/>
         <site id="webserver" url="https://github.com/mearvk/Java.Web.Server.Telnet.Front.Java.21" enabled="true"/>
         <site id="imaging" url="https://github.com/mearvk/Java.Imaging.Java.21" enabled="true"/>
+        <site id="imaging" url="https://github.com/mearvk/Senior.Senate.Attorney.E44Hrs" enabled="true"/>
+        <site id="imaging" url="https://github.com/mearvk/https-github.com-mearvk-Java.Web.Server.Telnet.Front.Java.25" enabled="true"/>
+        <site id="imaging" url="https://github.com/mearvk/Do.I.Suppose.You.Do.Suppose.I" enabled="true"/>
+        <site id="imaging" url="https://github.com/mearvk/LSAT.Legal.Publications" enabled="true"/>
+        <site id="imaging" url="https://github.com/mearvk/Rules.of.Simulations" enabled="true"/>
+
     </sites>
     <polling>
         <interval-seconds>300</interval-seconds>
