@@ -40,10 +40,19 @@ public class Main {
             if (dir != null) baseDir = dir.getPath() + File.separator;
         }
 
-        System.out.println("=== Green.Durham.Grass.and.Herb — Startup ===\n");
+        System.out.println("=== Green.Durham.Grass.and.Herb — Startup ===");
 
         XmlReader reader = new XmlReader();
         Map<String, Document> configs = reader.loadAll(CONFIG_PATHS);
+
+        // Print version from appree-config.xml
+        String version = "unknown";
+        Document appreeDoc = configs.get("configuration/appree-config.xml");
+        if (appreeDoc != null) {
+            NodeList vNodes = appreeDoc.getElementsByTagName("version");
+            if (vNodes.getLength() > 0) version = vNodes.item(0).getTextContent();
+        }
+        System.out.println("Version: " + version + "\n");
 
         System.out.println("\n--- Module Status ---");
 

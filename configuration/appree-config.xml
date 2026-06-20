@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <appree>
+    <!--
+        Version scheme: MAJOR.MINOR.PATCH
+        - MINOR: increment on each source-code compilation (e.g. 3.03.1 -> 3.04.1)
+        - PATCH: increment on any non-source update (config, data, docs) (e.g. 3.04.1 -> 3.04.2)
+        - MAJOR: reserved for architectural changes
+    -->
+    <version>3.03.1</version>
     <listeners>
         <listener enabled="true" port="40002" label="East Coast"/>
         <listener enabled="true" port="40003" label="West Coast"/>
