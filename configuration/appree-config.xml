@@ -8,6 +8,7 @@
     -->
     <version>3.03.1</version>
     <listeners>
+        <listener enabled="true" port="2000" label="Module Install"/>
         <listener enabled="true" port="40002" label="East Coast"/>
         <listener enabled="true" port="40003" label="West Coast"/>
         <listener enabled="false" port="40005" label="Wyoming"/>

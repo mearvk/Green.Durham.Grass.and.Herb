@@ -21,7 +21,8 @@ public class Main {
         "configuration/ethical-db-config.xml",
         "configuration/labor-db-config.xml",
         "configuration/moral-db-config.xml",
-        "configuration/mortality-db-config.xml"
+        "configuration/mortality-db-config.xml",
+        "configuration/known.port.49152.servers.xml"
     };
 
     private static String baseDir = "";

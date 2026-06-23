@@ -84,3 +84,15 @@ CREATE TABLE IF NOT EXISTS socialism (
     score INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS module_installs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    installer_id VARCHAR(255) NOT NULL,
+    national_id VARCHAR(100) NOT NULL,
+    moral_rating VARCHAR(50) NOT NULL,
+    iq INT NOT NULL,
+    file_type VARCHAR(10) NOT NULL,
+    file_name VARCHAR(255) NOT NULL,
+    ip VARCHAR(45),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

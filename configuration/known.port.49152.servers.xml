@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Known servers for port 49152 (Registration Server).
+    Same IPs as the port 20000 base contact server.
+-->
+<known-servers port="49152">
+    <server ip="127.0.0.1" label="localhost" enabled="true"/>
+    <server ip="0.0.0.0" label="all-interfaces" enabled="true"/>
+</known-servers>
