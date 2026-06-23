@@ -22,7 +22,8 @@ public class Main {
         "configuration/labor-db-config.xml",
         "configuration/moral-db-config.xml",
         "configuration/mortality-db-config.xml",
-        "configuration/known.port.49152.servers.xml"
+        "configuration/known.port.49152.servers.xml",
+        "configuration/jwstfj21-integration.xml"
     };
 
     private static String baseDir = "";
@@ -89,6 +90,21 @@ public class Main {
         System.out.println("[SYSTEM] Started from XML: " + (appreeLoaded ? "YES" : "NO"));
         System.out.println("[SYSTEM] Status: " + (systemReady ? "RUNNING" : "DEGRADED") + "\n");
 
+        // JWSTFJ21 integration — reflective masquerade
+        if (configs.containsKey("configuration/jwstfj21-integration.xml")) {
+            System.out.println("\n--- JWSTFJ21 Integration ---");
+            try {
+                Class<?> masqClass = Class.forName("integration.JWSTFJ21Masquerade");
+                Object masquerade = masqClass.getDeclaredConstructor().newInstance();
+                boolean integrated = (boolean) masqClass.getMethod("register").invoke(masquerade);
+                System.out.println("[JWSTFJ21] Status: " + (integrated ? "INTEGRATED" : "STANDALONE"));
+            } catch (ClassNotFoundException e) {
+                System.out.println("[JWSTFJ21] Masquerade class not compiled — skipping.");
+            } catch (Exception e) {
+                System.out.println("[JWSTFJ21] Integration deferred: " + e.getMessage());
+            }
+        }
+
         DecisionMaker dm = new DecisionMaker(configs);
         dm.evaluate();
     }
@@ -135,7 +151,7 @@ public class Main {
                     evaluateDbConfig(path, doc);
                 }
             }
-            int total = 7; // total expected configs
+            int total = 8; // total expected configs (incl. jwstfj21-integration)
             int loaded = configs.size();
             if (loaded == total) {
                 System.out.println("\u001B[32m[DECISION] Evaluation complete.\u001B[0m");

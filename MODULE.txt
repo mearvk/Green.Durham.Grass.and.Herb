@@ -1,0 +1,241 @@
+GREEN.DURHAM.GRASS.AND.HERB MODULE — MODULE.txt
+===================================================
+
+Version: 3.03.1
+Date: 2026-06-23
+Owner: Maximilian Eric Alexander Rupplin von Keffikon — MEARVK LLC
+Contact: https://github.com/mearvk/Java.Web.Server.Telnet.Front.Java.21/discussions
+Email: mearvk@mearvk.us | mearvk@outlook.com
+
+Parent: https://github.com/mearvk/Java.Web.Server.Telnet.Front.Java.21
+
+
+MODULE RATIONALE
+----------------
+
+This module provides the Appree contact server, labor/ethical/moral/mortality
+concerns database system, and coast listeners as a sub-module of the
+NitroWebExpress™ / JWSTFJ21 platform. It integrates via reflective masquerade
+into the NIO extended port space (0-1048576), registering its listeners under
+virtual port assignments that exceed the TCP 16-bit limit.
+
+Appree is a careful and concernful program all the way down to the Mayor of
+Chapel Hill and her study of students of the County. This is subtly an Appree
+project riding on NC Labor Laws & Organization.
+
+
+COMPONENTS
+----------
+
+JWSTFJ21Masquerade    — Reflective integration engine. Discovers JWSTFJ21's
+                        PortRegistry, Module, and VirtualChannel classes at runtime.
+                        Registers local listeners under extended virtual ports.
+                        Degrades to standalone if parent not on classpath.
+                        Source: source-code/integration/JWSTFJ21Masquerade.java
+
+BaseListener          — Port 20000 base public contact server.
+                        Geo lookup (GeoLite2 local / ip-api.com fallback),
+                        NationalID gate, DB logging to 2000_iq table.
+                        Source: source-code/listeners/BaseListener.java
+
+ModuleInstallListener — Port 2000 module install server.
+                        Accepts jar/sql files with valid Installer ID,
+                        NationalID, Moral Rating >= Very Good, IQ >= 126.
+                        Source: source-code/listeners/ModuleInstallListener.java
+
+CoastListeners        — Regional listeners (East 40002, West 40003, Texas 40007).
+                        Source: source-code/listeners/CoastListeners.java
+
+SocialismListener     — Socialism concern listener.
+                        Source: source-code/listeners/SocialismListener.java
+
+Appree                — Core Appree contact server logic.
+                        Source: source-code/appree/Appree.java
+
+GitHubPoller          — GitHub site polling daemon.
+                        Source: source-code/appree/GitHubPoller.java
+
+LaborAiInterpreter   — AI interpreter for labor law inquiries (DJL/PyTorch).
+                        Source: source-code/labor/LaborAiInterpreter.java
+
+EthicalConcerns       — Ethical concerns DB module.
+                        Source: source-code/ethical/EthicalConcerns.java
+
+LaborConcerns         — Labor concerns DB module.
+                        Source: source-code/labor/LaborConcerns.java
+
+MoralConcerns         — Moral concerns DB module.
+                        Source: source-code/moral/MoralConcerns.java
+
+MortalConcerns        — Mortality concerns DB module.
+                        Source: source-code/mortality/MortalConcerns.java
+
+
+PORT ASSIGNMENTS (LOCAL / PHYSICAL)
+------------------------------------
+
+2000    ModuleInstallListener (jar/sql acceptance with Installer ID gate)
+20000   BaseListener (base public contact — geo, NationalID, DB)
+40002   East Coast listener
+40003   West Coast listener
+40007   Texas listener
+49152   Registration server
+
+
+PORT ASSIGNMENTS (JWSTFJ21 VIRTUAL / EXTENDED)
+-----------------------------------------------
+
+When integrated with a JWSTFJ21 instance running in extended port-range mode
+(0-1048576, across 127.0.0.1 through 127.0.0.17):
+
+70000   -> local 20000  Base Contact Server
+70002   -> local 40002  East Coast
+70003   -> local 40003  West Coast
+70007   -> local 40007  Texas
+80000   -> local 2000   Module Install
+99152   -> local 49152  Registration
+
+IP mapping (per JWSTFJ21 extended mode):
+  127.0.0.1  = ports 0-65535
+  127.0.0.2  = ports 65536-131071   (virtual ports 70000-70007 land here)
+  127.0.0.2  = ports 65536-131071   (virtual port 80000 lands here)
+  127.0.0.2  = ports 65536-131071   (virtual port 99152 lands here)
+
+
+CONFIGURATION FILES
+-------------------
+
+configuration/appree-config.xml             — Listener enable/disable, version
+configuration/jwstfj21-integration.xml      — JWSTFJ21 parent connection, virtual ports, reflection targets
+configuration/github-polling-config.xml     — GitHub polling sites
+configuration/ai-interpreter-config.xml     — AI/DJL interpreter settings
+configuration/ethical-db-config.xml         — Ethical DB connection
+configuration/labor-db-config.xml           — Labor DB connection
+configuration/moral-db-config.xml           — Moral DB connection
+configuration/mortality-db-config.xml       — Mortality DB connection
+configuration/known.port.49152.servers.xml  — Known registration server IPs
+
+
+PRIVATE-TO-MASQUERADE TRANSITION (GDGH PERSPECTIVE)
+-----------------------------------------------------
+
+Green.Durham.Grass.and.Herb was originally designed as a private, standalone
+server suite — local-only listeners bound to physical TCP ports, direct MySQL
+access, no awareness of an outer hosting framework.
+
+The transition to masquerade-enabled operation introduces the following local
+additions from this program's perspective:
+
+  1. STANDALONE (PRIVATE) MODE — default when JWSTFJ21 is absent.
+     - All listeners bind directly to physical ports (2000, 20000, 40002, etc.)
+     - BaseListener handles raw TCP connections with its own NationalID gate.
+     - No dependency on any external port registry or virtual channel layer.
+     - Full functionality retained: geo lookup, DB logging, module install.
+
+  2. MASQUERADE (INTEGRATED) MODE — activated when JWSTFJ21 is on classpath.
+     - JWSTFJ21Masquerade reflectively binds to the parent PortRegistry.
+     - Physical listeners remain running (backward compatibility).
+     - Virtual port registrations are added ON TOP of physical ports:
+         Physical 20000 still listens AND virtual 70000 is registered.
+     - Inbound traffic may arrive via either path; both route to the same
+       handler logic.
+     - Module announces itself to the JWSTFJ21 directory server (port 2000
+       on the parent), making it discoverable via <nwe-route> XML forwarding.
+
+  3. WHAT CHANGES LOCALLY DURING TRANSITION:
+     - source-code/integration/JWSTFJ21Masquerade.java is compiled and loaded.
+     - configuration/jwstfj21-integration.xml is parsed for virtual port map.
+     - Main.java startup sequence gains a JWSTFJ21 integration phase after
+       the standard system-ready check.
+     - The program reports INTEGRATED or STANDALONE status at boot.
+     - No existing listener code is modified — masquerade wraps, not replaces.
+
+  4. DUAL-HOMED IDENTITY:
+     - From JWSTFJ21's perspective: this is module "green-durham-grass-and-herb",
+       Rank 4, reachable at virtual ports 70000-99152.
+     - From this program's perspective: it is still a private Appree server that
+       happens to also be discoverable through a parent NIO masquerade layer.
+     - The NationalID gate, Moral Rating checks, and Installer ID requirements
+       remain enforced locally regardless of how traffic arrives.
+
+  5. FALLBACK BEHAVIOR:
+     - If JWSTFJ21 classes disappear from classpath (jar removed, server down),
+       the masquerade deregisters cleanly and the program continues in private
+       standalone mode with zero degradation.
+     - Retry policy (30s interval, 10 max) allows re-integration if JWSTFJ21
+       comes back online without restarting this program.
+
+
+JWSTFJ21 INTEGRATION PROTOCOL
+-------------------------------
+
+1. On startup, Main.java loads configuration/jwstfj21-integration.xml.
+2. JWSTFJ21Masquerade is instantiated reflectively.
+3. Class.forName() attempts to locate:
+     com.mearvk.jwstfj21.PortRegistry
+     com.mearvk.jwstfj21.Module
+     com.mearvk.jwstfj21.VirtualChannel
+4. If found: registers this module's handlers under virtual ports via
+   PortRegistry.registerVirtualPort() and announces via announceModule().
+5. If not found: degrades to standalone mode, retries per retry policy
+   (default: every 30s, max 10 attempts).
+
+XML forwarding from JWSTFJ21 port 2000 directory server:
+  <nwe-route><port>70000</port><payload>IDENTIFY</payload></nwe-route>
+  Routes to this module's BaseListener (local 20000).
+
+
+RANK & INSTALLER ID
+--------------------
+
+This module operates at Rank 4 (International/Free) within JWSTFJ21.
+
+Installer ID: Max Rupplin - MEARVK LLC
+
+Requirements for module acceptance by JWSTFJ21's ModuleInstallationService
+(port 49166) and ModuleLoaderDaemon (port 49188):
+  - Valid Installer ID from MEARVK LLC
+  - NationalID on file
+  - Moral Rating >= "Very Good"
+  - IQ >= 126
+  - Signed acknowledgment of software authorization terms
+
+Rank upgrade requests and Technical Installer IDs:
+  https://github.com/mearvk/Java.Web.Server.Telnet.Front.Java.21/discussions
+
+
+DATABASE
+--------
+
+MySQL database: green_durham_grass_and_herb
+
+Tables:
+  ethical         — Ethical concerns
+  labor           — Labor concerns
+  moral           — Moral concerns
+  mortality       — Mortality concerns
+  2000_iq         — All questions asked to Appree (geo, NationalID, remote_address)
+  module_installs — Module installation log
+  listeners_*     — Per-region connection logs
+
+
+DEPENDENCIES
+------------
+
+JDK 21+
+MySQL 8.x (jdbc:mysql://localhost:3306/green_durham_grass_and_herb)
+DJL / PyTorch (jars/ directory — api-0.31.0, pytorch-engine-0.31.0, etc.)
+SLF4J 2.0.16
+Gson 2.11.0
+JNA 5.15.0
+GeoLite2 (optional, data/GeoLite2-City.mmdb)
+
+No additional dependencies required for JWSTFJ21 integration — reflection only.
+
+
+AUTHOR
+------
+
+Max Rupplin — MEARVK LLC
+https://github.com/mearvk/Java.Web.Server.Telnet.Front.Java.21/discussions
+mearvk@mearvk.us | mearvk@outlook.com

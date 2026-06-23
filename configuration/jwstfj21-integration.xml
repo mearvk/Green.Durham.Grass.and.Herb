@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    JWSTFJ21 Integration Configuration
+    Java.Web.Server.Telnet.Front.Java.21
+
+    This program registers as a module within a JWSTFJ21 instance that supports
+    more than 65536 ports via virtual channel multiplexing. Virtual ports above
+    65535 are addressed through JWSTFJ21's extended port-space protocol.
+
+    The masquerade allows Green.Durham.Grass.and.Herb to appear as a native
+    sub-module of the larger JWSTFJ21 package at runtime.
+-->
+<jwstfj21-integration>
+
+    <!-- JWSTFJ21 parent server connection -->
+    <host>127.0.0.1</host>
+    <control-port>9000</control-port>
+
+    <!-- Module identity within JWSTFJ21 -->
+    <module-id>green-durham-grass-and-herb</module-id>
+    <module-version>3.03.1</module-version>
+    <module-authority>MEARVK LLC</module-authority>
+
+    <!-- GitHub source for classpath resolution -->
+    <jwstfj21-source>https://github.com/mearvk/Java.Web.Server.Telnet.Front.Java.21</jwstfj21-source>
+
+    <!--
+        Virtual port assignments — these exceed the TCP 16-bit limit (65535).
+        JWSTFJ21 multiplexes these over its physical socket channels.
+
+        Mapping:
+          virtual-port 70000  -> local Appree base contact (physical 20000)
+          virtual-port 70002  -> local East Coast listener (physical 40002)
+          virtual-port 70003  -> local West Coast listener (physical 40003)
+          virtual-port 70007  -> local Texas listener (physical 40007)
+          virtual-port 80000  -> local Module Install (physical 2000)
+          virtual-port 99152  -> local Registration server (physical 49152)
+    -->
+    <virtual-ports>
+        <virtual-port local-port="20000" label="Base Contact Server">70000</virtual-port>
+        <virtual-port local-port="40002" label="East Coast">70002</virtual-port>
+        <virtual-port local-port="40003" label="West Coast">70003</virtual-port>
+        <virtual-port local-port="40007" label="Texas">70007</virtual-port>
+        <virtual-port local-port="2000"  label="Module Install">80000</virtual-port>
+        <virtual-port local-port="49152" label="Registration">99152</virtual-port>
+    </virtual-ports>
+
+    <!--
+        Reflective class targets — JWSTFJ21 classes loaded at runtime.
+        If not on classpath, the masquerade degrades to standalone mode.
+    -->
+    <reflection>
+        <registry-class>com.mearvk.jwstfj21.PortRegistry</registry-class>
+        <module-class>com.mearvk.jwstfj21.Module</module-class>
+        <channel-class>com.mearvk.jwstfj21.VirtualChannel</channel-class>
+    </reflection>
+
+    <!--
+        Retry policy when JWSTFJ21 is not yet available.
+        The masquerade will attempt reconnection on this interval.
+    -->
+    <retry-interval-seconds>30</retry-interval-seconds>
+    <max-retries>10</max-retries>
+
+</jwstfj21-integration>
