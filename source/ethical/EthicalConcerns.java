@@ -1,4 +1,4 @@
-package presidential.Green.Durham.Grass.and.Herb.source-code.ethical;
+package presidential.Green.Durham.Grass.and.Herb.source.ethical;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

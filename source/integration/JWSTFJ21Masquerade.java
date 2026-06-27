@@ -1,4 +1,4 @@
-package presidential.Green.Durham.Grass.and.Herb.source-code.integration;
+package presidential.Green.Durham.Grass.and.Herb.source.integration;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.*;

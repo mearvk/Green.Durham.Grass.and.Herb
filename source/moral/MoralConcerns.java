@@ -1,4 +1,4 @@
-package presidential.Green.Durham.Grass.and.Herb.source-code.moral;
+package presidential.Green.Durham.Grass.and.Herb.source.moral;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

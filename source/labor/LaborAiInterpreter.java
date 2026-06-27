@@ -1,4 +1,4 @@
-package presidential.Green.Durham.Grass.and.Herb.source-code.labor;
+package presidential.Green.Durham.Grass.and.Herb.source.labor;
 
 import java.io.*;
 import java.net.ServerSocket;

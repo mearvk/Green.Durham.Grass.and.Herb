@@ -1,4 +1,4 @@
-package presidential.Green.Durham.Grass.and.Herb.source-code.mortality;
+package presidential.Green.Durham.Grass.and.Herb.source.mortality;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
