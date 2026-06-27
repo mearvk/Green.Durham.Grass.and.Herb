@@ -1,4 +1,4 @@
-package labor;
+package presidential.Green.Durham.Grass.and.Herb.source-code.labor;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

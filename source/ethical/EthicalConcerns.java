@@ -1,4 +1,4 @@
-package mortality;
+package presidential.Green.Durham.Grass.and.Herb.source-code.ethical;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,9 +6,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import java.io.File;
 
-public class MortalConcerns {
+public class EthicalConcerns {
 
-    private static final String CONFIG_PATH = "source-code/mortality/db-config.xml";
+    private static final String CONFIG_PATH = "source-code/ethical/db-config.xml";
 
     public static Connection getConnection() throws Exception {
         Document doc = DocumentBuilderFactory.newInstance()
