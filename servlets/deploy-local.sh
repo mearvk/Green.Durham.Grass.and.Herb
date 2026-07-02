@@ -6,7 +6,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 GDGH_ROOT="$(dirname "$SCRIPT_DIR")"
 WEBAPP_SRC="$GDGH_ROOT/servlets/servlet/src/main/webapp"
-TOMCAT_HOME="${1:-${CATALINA_HOME:-/opt/tomcat}}"
+TOMCAT_HOME="${1:-${CATALINA_HOME:-/home/mearvk/tomcat}}"
 CONTEXT="gdgh"
 DEPLOY_DIR="$TOMCAT_HOME/webapps/$CONTEXT"
 
@@ -19,12 +19,13 @@ rm -rf "$DEPLOY_DIR"
 mkdir -p "$DEPLOY_DIR/WEB-INF/lib"
 cp -r "$WEBAPP_SRC/"* "$DEPLOY_DIR/"
 
-# Copy JDBC driver
-JDBC_JAR=$(find "$(dirname "$GDGH_ROOT")" -name "mysql-connector-j*.jar" -type f 2>/dev/null | head -1)
+# Copy JDBC driver (canonical — from BMA jars/)
+NWE_ROOT="$(cd "$(dirname \"$0\")/../../../.." 2>/dev/null && pwd)"
+JDBC_JAR=$(find "$NWE_ROOT/modules/black/presidential/Brarner.M.Alete/jars" "$NWE_ROOT/jars/mysql" -name "mysql-connector-j*.jar" -type f 2>/dev/null | head -1)
 [ -z "$JDBC_JAR" ] && JDBC_JAR=$(find "$TOMCAT_HOME/lib" -name "mysql-connector-j*.jar" -type f 2>/dev/null | head -1)
 if [ -n "$JDBC_JAR" ]; then
     cp "$JDBC_JAR" "$DEPLOY_DIR/WEB-INF/lib/"
-    echo "[*] MySQL connector: $(basename "$JDBC_JAR")"
+    echo "[*] MySQL connector: $(basename \"$JDBC_JAR\")"
 else
     echo "[!] WARNING: mysql-connector-j not found — JDBC pages will fail"
 fi
