@@ -5,7 +5,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MOD_ROOT="$(dirname "$SCRIPT_DIR")"
-NWE_ROOT="$(cd "$MOD_ROOT/../../../.." && pwd)"
+NWE_ROOT="$(cd "$MOD_ROOT/../../.." && pwd)"
 DB_PROPS="$MOD_ROOT/servlets/servlet/src/main/webapp/WEB-INF/db.properties"
 TMP_DIR="/tmp/gdgh-jdbc-test"
 
@@ -16,7 +16,7 @@ echo "════════════════════════�
 echo ""
 echo "[1] Locating MySQL connector JAR..."
 MYSQL_JAR=$(find \
-  "$NWE_ROOT/modules/black/presidential/Brarner.M.Alete/jars" \
+  "$NWE_ROOT/modules/Brarner.M.Alete/jars" \
   "$NWE_ROOT/jars/mysql" \
   -name "mysql-connector-j-*.jar" 2>/dev/null | head -1)
 if [ -z "$MYSQL_JAR" ]; then

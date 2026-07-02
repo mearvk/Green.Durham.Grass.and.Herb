@@ -1,6 +1,6 @@
 #!/bin/bash
 # Green.Durham.Grass.and.Herb™ — Setup MySQL Database
-# Usage: bash modules/black/presidential/Green.Durham.Grass.and.Herb/servlets/setup-db.sh
+# Usage: bash modules/Green.Durham.Grass.and.Herb/servlets/setup-db.sh
 set -e
 
 DB_USER="root"
