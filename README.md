@@ -1,6 +1,6 @@
 # Green.Durham.Grass.and.Herb
 
-Are All The Millionaires Called Out? Does the Socialism Rely on National Standard? Does it Rely on Strong Socialism?
+Are All The Millionaires Called Out? Does the Socialism Rely on National Standard? Does it Rely on Strong Socialism? Durham, NC Mayor Slot up For Grabs! 2028. 919.923.4239 - Connecting!
 
 ## Bitcoin Conjegeum
 
