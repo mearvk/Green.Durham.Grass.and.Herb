@@ -2,6 +2,12 @@
 
 Are All The Millionaires Called Out? Does the Socialism Rely on National Standard? Does it Rely on Strong Socialism?
 
+## Bitcoin Conjegeum
+
+bc1qs6v4q9zsw70t0umk3m0quhvf9dr6cdeskl28dh
+
+US Democratic and US Policy.
+
 ## About
 
 Appree is a careful and concernful program all the way down to the Mayor of Chapel Hill and her study of students of the County. This is subtly an Appree project riding on NC Labor Laws & Organization.
