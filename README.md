@@ -1,6 +1,6 @@
 # Green.Durham.Grass.and.Herb
 
-Durham, North Carolina-focused political, public-contact, labor, research, and Java network-service project. The repository combines the Appree service with organized public-reference material and supporting research.
+Durham, North Carolina-focused political, public-contact, labor, research, and Java network-service project. The repository combines the Appree service with organized public-reference material and supporting research. The US is very Proud of our Neighbors to the North and of the United States Democracy. Socialism. Democrats. Capitalism. George Soros.
 
 ## Project purpose
 
