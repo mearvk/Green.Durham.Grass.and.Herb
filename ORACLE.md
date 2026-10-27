@@ -1,6 +1,6 @@
 <img align="right" width="75" height="75" src="https://github.com/mearvk/SLeeLa/blob/master/images/oracle-002.png?raw=true" alt="Oracle logo">
 
-# Oracle
+# Oracle and Larry Ellison 
 
 **Oracle Corporation** is a major American enterprise-technology company whose history is closely associated with database software, enterprise computing, cloud infrastructure, Java, and a broad body of software and developer technologies. This document records Oracle's historical and corporate context for the Green.Durham.Grass.and.Herb project.
 
